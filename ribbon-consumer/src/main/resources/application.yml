@@ -1,0 +1,9 @@
+server:
+  port: 13001
+spring:
+  application:
+    name: service-ribbon
+eureka:
+  client:
+    service-url:
+      defaultZone: http://peer1:12001/eureka/
