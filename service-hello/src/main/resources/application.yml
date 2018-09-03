@@ -1,9 +1,12 @@
 server:
-  port: 12345
+  port: 0
 spring:
   application:
     name: service-hello
+
 eureka:
   client:
     service-url:
       defaultZone: http://peer1:12001/eureka/
+  instance:
+    instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${random.int(65536)}
